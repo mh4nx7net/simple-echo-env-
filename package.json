@@ -1,0 +1,29 @@
+{
+	"name": "simple-echo-env",
+	"version": "1.0.0",
+	"description": "",
+	"main": "dist/index.js",
+	"scripts": {
+		"dev": "npm-run-all --parallel start playground",
+		"start": "nodemon -e ts,graphql -x ts-node -r dotenv/config src",
+		"playground": "graphql playground",
+		"deploy": "vercel --public && vercel alias && vercel rm --yes --safe fakerql.vercel.app",
+		"build": "tsc",
+		"now-start": "export NODE_ENV=dev && node dist"
+	},
+	"author": "",
+	"license": "ISC",
+	"devDependencies": {
+		"@types/node": "9.6.41",
+		"dotenv": "4.0.0",
+		"nodemon": "1.18.9",
+		"ts-node": "4.1.0",
+		"typescript": "2.9.2"
+	},
+	"prettier": {
+		"semi": false,
+		"singleQuote": true,
+		"trailingComma": "all"
+	}
+
+}

@@ -1,0 +1,59 @@
+Arguments: 
+  /home/dev/.nvm/versions/node/v14.16.0/bin/node /usr/share/yarn/bin/yarn.js dev
+
+PATH: 
+  /home/dev/.nvm/versions/node/v14.16.0/bin:/home/dev/.platformsh/bin:/home/dev/.pyenv/shims:/home/dev/.pyenv/bin:/home/dev/.local/bin:/home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/sbin:/home/dev/.cargo/bin:/home/dev/.rvm/gems/ruby-2.7.0/bin:/home/dev/.rvm/gems/ruby-2.7.0@global/bin:/home/dev/.rvm/rubies/ruby-2.7.0/bin:/opt/anaconda3/condabin:/opt/gradle/gradle-6.0/bin:/opt/gradle/gradle-6.8.3/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/dev/.rvm/bin:/opt/llvm-xtensa/bin:/home/dev/.arduino15/packages/esp8266/tools/xtensa-lx106-elf-gcc/2.5.0-4-b40a506/bin:/usr/local/go/bin:/home/dev/esp/esp-idf:/home/dev/Android/Sdk/tools:/home/dev/.fzf/bin:/home/dev/go/bin:/home/dev/Android/cmdline-tools/latest/bin/:/home/dev/.antigen/bundles/robbyrussell/oh-my-zsh/lib:/home/dev/.antigen/bundles/zsh-users/zsh-syntax-highlighting:/home/dev/.antigen/bundles/zsh-users/zsh-history-substring-search:/home/dev/.antigen/bundles/zsh-users/zsh-autosuggestions:/home/dev/.antigen/bundles/esc/conda-zsh-completion:/home/dev/.antigen/bundles/denysdovhan/spaceship-zsh-theme:/home/dev/.rvm/bin:/home/dev/.antigen/bundles/lukechilds/zsh-nvm
+
+Yarn version: 
+  1.22.5
+
+Node version: 
+  14.16.0
+
+Platform: 
+  linux x64
+
+Trace: 
+  SyntaxError: /home/dev/Documents/KERJA/kopikonfig.com/JOBS/tools/simple-echo-env/package.json: Unexpected string in JSON at position 481
+      at JSON.parse (<anonymous>)
+      at /usr/share/yarn/lib/cli.js:1625:59
+      at Generator.next (<anonymous>)
+      at step (/usr/share/yarn/lib/cli.js:310:30)
+      at /usr/share/yarn/lib/cli.js:321:13
+
+npm manifest: 
+  {
+    "name": "simple-echo-env",
+    "version": "1.0.0",
+    "description": "",
+    "main": "dist/index.js",
+    "scripts": {
+      "dev": "npm-run-all --parallel start playground",
+      "start": "nodemon -e ts,graphql -x ts-node -r dotenv/config src",
+      "playground": "graphql playground",
+      "deploy": "vercel --public && vercel alias && vercel rm --yes --safe fakerql.vercel.app",
+      "build": "rimraf dist && tsc",
+      "now-start": "node dist"
+  
+    },
+    "author": "",
+    "license": "ISC"
+    "devDependencies": {
+      "@types/node": "9.6.41",
+      "nodemon": "1.18.9",
+      "ts-node": "4.1.0",
+      "typescript": "2.9.2"
+    },
+    "prettier": {
+      "semi": false,
+      "singleQuote": true,
+      "trailingComma": "all"
+    }
+  
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile

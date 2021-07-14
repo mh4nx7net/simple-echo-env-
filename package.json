@@ -9,7 +9,8 @@
 		"playground": "graphql playground",
 		"deploy": "vercel --public && vercel alias && vercel rm --yes --safe fakerql.vercel.app",
 		"build": "tsc",
-		"now-start": "export NODE_ENV=dev && node dist"
+		"now-start": "export NODE_ENV=dev && node dist",
+		"vercel-build": "node ./build.js"
 	},
 	"author": "",
 	"license": "ISC",

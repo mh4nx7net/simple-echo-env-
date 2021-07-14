@@ -1,0 +1,13 @@
+{
+	"public": true,
+	"env": {
+		"JWT_SECRET": "1234"
+	},
+	"version": 2,
+	"build": {
+		"env": {
+			"JWT_SECRET": "1234"
+		}
+	}
+}
+

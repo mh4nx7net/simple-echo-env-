@@ -24,6 +24,8 @@
 		"semi": false,
 		"singleQuote": true,
 		"trailingComma": "all"
+	},
+	"dependencies": {
+		"@vercel/node": "^1.11.1"
 	}
-
 }
